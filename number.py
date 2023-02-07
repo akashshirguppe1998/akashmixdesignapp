@@ -506,30 +506,30 @@ if selected=="MIX DESIGN":
 		st.write("**TRAIL 1 (By weight)**")
 		st.write("(*All in Kg/m^3*)")	
 		col1,col2,col3,col4=st.columns(4)
-		col1.metric(label="**CEMENT**",value=Cement1)
-		col2.metric(label="**WATER**",value=round(water2))
-		col3.metric(label="**COARSE AGGREGATE(SSD)**",value=MCA)
-		col4.metric(label="**FINE AGGREGATE(SSD)**",value=MFA)
+		col1.metric(label="CEMENT",value=Cement1)
+		col2.metric(label="WATER",value=round(water2))
+		col3.metric(label="COARSE AGGREGATE(SSD)",value=MCA)
+		col4.metric(label="FINE AGGREGATE(SSD)",value=MFA)
 
 		if l==0 and m==0 and n==0:
-			col1.metric(label="**CHEM.ADMIXTURE**",value=P1)
+			col1.metric(label="CHEM.ADMIXTURE",value=P1)
 		else:
 			if m==0 and n==0:
 				col1,col2=st.columns(2)		
-				col1.metric(label="**MIN.ADMIXTURE 1**",value=l2)
-				col2.metric(label="**CHEM.ADMIXTURE**",value=P1)
+				col1.metric(label="MIN.ADMIXTURE 1",value=l2)
+				col2.metric(label="CHEM.ADMIXTURE",value=P1)
 			elif n==0:
 				col1,col2,col3=st.columns(3)
-				col1.metric(label="**MINERAL ADMIXTURE 1**",value=l2)
-				col2.metric(label="**MINERAL ADMIXTURE 2**",value=m2)
-				col3.metric(label="**CHEM.ADMIXTURE**",value=P1)
+				col1.metric(label="MINERAL ADMIXTURE 1",value=l2)
+				col2.metric(label="MINERAL ADMIXTURE 2",value=m2)
+				col3.metric(label="CHEM.ADMIXTURE",value=P1)
 			else:
 				col1,col2,col3,col4=st.columns(4)
-				col1.metric(label="**MINERAL ADMIXTURE 1**",value=l2)
-				col2.metric(label="**MINERAL ADMIXTURE 2**",value=m2)
-				col3.metric(label="**MINERAL ADMIXTURE 3**",value=n2)
-				col4.metric(label="**CHEM.ADMIXTURE**",value=P1)
-		col1.metric(label="**WATER-CEMENT RATIO**",value=round(w_cmp,4))	
+				col1.metric(label="MINERAL ADMIXTURE 1",value=l2)
+				col2.metric(label="MINERAL ADMIXTURE 2",value=m2)
+				col3.metric(label="MINERAL ADMIXTURE 3",value=n2)
+				col4.metric(label="CHEM.ADMIXTURE",value=P1)
+		col1.metric(label="WATER-CEMENT RATIO",value=round(w_cmp,4))	
 		st.write("******")
 
 	## METRIC DISPLAY OF RESULTS TRAIL2 ##
@@ -668,37 +668,37 @@ if selected=="MIX DESIGN":
 			st.write("**TRAIL 2**")
 			st.write("(*All in Kg/m^3*)")
 			col1,col2,col3,col4=st.columns(4)
-			col1.metric(label="**CEMENT**",value=Cement1)
-			col2.metric(label="**WATER**",value=round(water22))
+			col1.metric(label="CEMENT",value=Cement1)
+			col2.metric(label="WATER",value=round(water22))
 
 			if FrMoCo1<=0:
-				col3.metric(label="**COARSE AGGREGATE(DRY)**",value=MCA1)
+				col3.metric(label="COARSE AGGREGATE(DRY)",value=MCA1)
 			elif FrMoCo1>0:
-				col3.metric(label="**COARSE AGGREGATE(WET)**",value=MCA1)
+				col3.metric(label="COARSE AGGREGATE(WET)",value=MCA1)
 
 			if FrMoCo2<=0:
-				col4.metric(label="**FINE AGGREGATE(DRY)**",value=MFA1)
+				col4.metric(label="FINE AGGREGATE(DRY)",value=MFA1)
 			elif FrMoCo2>0:
-				col4.metric(label="**FINE AGGREGATE(WET)**",value=MFA1)
+				col4.metric(label="FINE AGGREGATE(WET)",value=MFA1)
 			if l==0 and m==0 and n==0:
-				col1.metric(label="**CHEM.ADMIXTURE**",value=P1)
+				col1.metric(label="CHEM.ADMIXTURE",value=P1)
 			else:
 				if m==0 and n==0:
 					col1,col2=st.columns(2)		
-					col1.metric(label="**MIN.ADMIXTURE 1**",value=l2)
-					col2.metric(label="**CHEM.ADMIXTURE**",value=P1)
+					col1.metric(label="MIN.ADMIXTURE 1",value=l2)
+					col2.metric(label="CHEM.ADMIXTURE",value=P1)
 				elif n==0:
 					col1,col2,col3=st.columns(3)
-					col1.metric(label="**MINERAL ADMIXTURE 1**",value=l2)
-					col2.metric(label="**MINERAL ADMIXTURE 2**",value=m2)
-					col3.metric(label="**CHEM.ADMIXTURE**",value=P1)
+					col1.metric(label="MINERAL ADMIXTURE 1",value=l2)
+					col2.metric(label="MINERAL ADMIXTURE 2",value=m2)
+					col3.metric(label="CHEM.ADMIXTURE",value=P1)
 				else:
 					col1,col2,col3,col4=st.columns(4)
-					col1.metric(label="**MINERAL ADMIXTURE 1**",value=l2)
-					col2.metric(label="**MINERAL ADMIXTURE 2**",value=m2)
-					col3.metric(label="**MINERAL ADMIXTURE 3**",value=n2)
-					col4.metric(label="**CHEM.ADMIXTURE**",value=P1)	
-			col1.metric(label="**WATER-CEMENT RATIO**",value=round(w_cmp,4))
+					col1.metric(label="MINERAL ADMIXTURE 1",value=l2)
+					col2.metric(label="MINERAL ADMIXTURE 2",value=m2)
+					col3.metric(label="MINERAL ADMIXTURE 3",value=n2)
+					col4.metric(label="CHEM.ADMIXTURE",value=P1)	
+			col1.metric(label="WATER-CEMENT RATIO",value=round(w_cmp,4))
 			
 			st.write("***")	
 			if FrMoCo1 != 0:
