@@ -79,7 +79,7 @@ if selected=="MIX DESIGN":
 	with col1:
 		OPC=st.number_input("GRADE OF CEMENT")
 	with col2:
-		SpCement=st.number_input("SPECIFIC GRAVITY OF CEMENT")	
+		SpCement=st.number_input("SPECIFIC GRAVITY OF CEMENT",min_value=0.0001)	
 
 	col1,col2=st.columns(2)
 	with col1:
@@ -93,18 +93,18 @@ if selected=="MIX DESIGN":
 	with col1:
 		if fck<65:
 			CAgg=["10","20","40"]
-			cagg=st.radio("*SIZE(MM)*",CAgg)
+			cagg=st.radio("SIZE(MM)",CAgg)
 		elif fck>=65:
 			CAgg=["10","12.5","20"]
-			cagg=st.radio("*SIZE(MM)*",CAgg)
+			cagg=st.radio("SIZE(MM)",CAgg)
 	with col2:	
 		CAsh=["ANGULAR","SUB-ANGULAR","GRAVEL(CRUSHED PARTICLES)","ROUNDED GRAVEL"]
-		cash=st.radio("*SHAPE OF AGGREGATES*",CAsh)
+		cash=st.radio("SHAPE OF AGGREGATES",CAsh)
 	with col3:
 		if fck<65:
 			Zones=["I","II","III","IV"]
 			
-			zone=st.radio("*ZONES OF FINE AGGREGATES*",Zones)
+			zone=st.radio("ZONES OF FINE AGGREGATES",Zones)
 		elif fck>=65:
 			Zones=["I","II","III"]
 			#st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>',unsafe_allow_html=True)
@@ -535,7 +535,7 @@ if selected=="MIX DESIGN":
 	## METRIC DISPLAY OF RESULTS TRAIL2 ##
 		
 	#EXPANDERS TO READ INPUT AND OUTPUT DETAILS
-	with st.expander("**CLICK HERE FOR DETAILED OUTPUT**"):
+	with st.expander("CLICK HERE FOR DETAILED OUTPUT"):
 		st.write("***")
 		st.write("**1] TARGET STRENGTH FOR MIX PROPORTIONING**")
 		st.write("Target strength of concrete = **%.2f N/mm^2** ." % fcf)
